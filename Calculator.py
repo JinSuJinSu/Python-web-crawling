@@ -11,7 +11,6 @@ root.geometry("640x480+500+200")#가로x세로 + x좌표 +y좌표
 btn_input = StringVar()
 
 
-
 # 계산된 숫자가 쓰일 화면을 만든다.
 calculator_screen = Entry(root, width=20, bd = 2, textvariable = btn_input)
 calculator_screen.grid(row = 0, columnspan = 4, sticky = N+E+W+S, padx = 3, pady = 3, ipady = 5)
@@ -70,15 +69,17 @@ btn_dot.grid(row = 5, column = 1, sticky = N+E+W+S, padx = 3, pady = 3)
 btn_equal.grid(row = 5, column = 2, sticky = N+E+W+S, padx = 3, pady = 3)
 btn_add.grid(row = 5, column = 3, sticky = N+E+W+S, padx = 3, pady = 3)
 
-# 클릭 기능 넣기
+# 클릭 기능
 def btn_click(btn):
     current = calculator_screen.get()
     calculator_screen.delete(0,END)
     calculator_screen.insert(0, str(current) + str(btn))
 
+# 지우기 기능
 def btn_clear():
     calculator_screen.delete(0, END)
 
+#더하기 기능
 def btn_add():
     first_number = calculator_screen.get()
     global first_num
@@ -87,6 +88,7 @@ def btn_add():
     first_num = int(first_number)
     calculator_screen.delete(0,END)
 
+#빼기 기능
 def btn_sub():
     first_number = calculator_screen.get()
     global first_num
@@ -95,6 +97,7 @@ def btn_sub():
     first_num = int(first_number)
     calculator_screen.delete(0,END)
 
+#곱하기 기능
 def btn_mul():
     first_number = calculator_screen.get()
     global first_num
@@ -103,6 +106,7 @@ def btn_mul():
     first_num = int(first_number)
     calculator_screen.delete(0,END)
 
+#나누기 기능
 def btn_div():
     first_number = calculator_screen.get()
     global first_num
@@ -111,6 +115,7 @@ def btn_div():
     first_num = int(first_number)
     calculator_screen.delete(0,END)
 
+#연산 결과 기능
 def btn_equal():
     second_number = calculator_screen.get()
     calculator_screen.delete(0,END)
