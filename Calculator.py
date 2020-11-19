@@ -65,7 +65,7 @@ btn_dot.grid(row = 5, column = 1, padx = 3, pady = 3)
 btn_equal.grid(row = 5, column = 2, padx = 3, pady = 3)
 btn_addition.grid(row = 5, column = 3, padx = 3, pady = 3)
 
-# 계산기 기능들
+# 계산기에 필요한 기능들
 
 #1. 클릭 기능
 def btn_click(btn):
