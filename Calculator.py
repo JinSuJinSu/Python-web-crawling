@@ -66,15 +66,18 @@ btn_equal.grid(row = 5, column = 2, padx = 3, pady = 3)
 btn_addition.grid(row = 5, column = 3, padx = 3, pady = 3)
 
 # 계산기 기능들
+
 #1. 클릭 기능
 def btn_click(btn):
     current = calculator_screen.get()
     calculator_screen.delete(0,END)
     calculator_screen.insert(0, current + str(btn))
 
+
 #2. 초기화 기능
 def btn_clear():
     calculator_screen.delete(0, END)
+
 
 #3. 더하기 기능
 def btn_add():
@@ -84,6 +87,7 @@ def btn_add():
     calculation = 'addition'
     first_num = int(first_number)
     calculator_screen.delete(0,END)
+
 
 #4. 빼기 기능
 def btn_sub():
@@ -104,6 +108,7 @@ def btn_mul():
     first_num = int(first_number)
     calculator_screen.delete(0,END)
 
+
 #6. 나누기 기능
 def btn_div():
     first_number = calculator_screen.get()
@@ -112,6 +117,7 @@ def btn_div():
     calculation = 'divsiion'
     first_num = int(first_number)
     calculator_screen.delete(0,END)
+
 
 #7. 계산 결과 기능
 def btn_equal():
